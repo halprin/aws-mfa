@@ -27,6 +27,8 @@ func GetTokenAndSave(mfaDeviceArn string, profile string, mfaCode string, durati
 		return err
 	}
 
+	fmt.Printf("Logging into AWS for profile %s for %d seconds using MFA device %s\n", profile, duration, mfaDeviceArn)
+
 	mfaCode, err = getMfaCodeUnlessSpecified(mfaCode)
 
 	stsService := aws.StsService{
