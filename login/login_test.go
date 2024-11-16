@@ -21,3 +21,12 @@ func Test_setSensibleDefaults_profileAndDurationSpecified(t *testing.T) {
 	assert.Equal(t, inputProfile, outputProfile)
 	assert.Equal(t, inputDuration, outputDuration)
 }
+
+func Test_getMfaCodeUnlessSpecified_returnsSameCodeAsProvided(t *testing.T) {
+	inputMfaCode := "DogCow"
+
+	outputMfaCode, err := getMfaCodeUnlessSpecified(inputMfaCode)
+
+	assert.NoError(t, err)
+	assert.Equal(t, inputMfaCode, outputMfaCode)
+}
