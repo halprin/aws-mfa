@@ -25,6 +25,8 @@ aws_session_token     = a
 source_profile        = <long-term profile section name, e.g. default-long-term>
 ```
 
+The `a`s will be replaced with real values after you run `aws-mfa` successfully.
+
 ## Usage
 
 ```shell
