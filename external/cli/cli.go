@@ -12,7 +12,7 @@ func Start() {
 
 	loginAction := cli.NewCommand("login", "Login with MFA code").
 		WithOption(cli.NewOption("mfa-device-arn", "ARN of the MFA device used to login").WithType(cli.TypeString)).
-		WithOption(cli.NewOption("profile", "Profile name from the credentials file to login").WithType(cli.TypeString)).
+		WithOption(cli.NewOption("profile", "Non-long-term profile name from the credentials file to login with").WithType(cli.TypeString)).
 		WithOption(cli.NewOption("mfa-code", "Current MFA code").WithType(cli.TypeString)).
 		WithOption(cli.NewOption("duration", "Length of time, in seconds, to be logged in for").WithType(cli.TypeInt)).
 		WithAction(func(args []string, options map[string]string) int {
