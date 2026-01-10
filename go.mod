@@ -10,7 +10,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/sts v1.41.6
 	github.com/stretchr/testify v1.11.1
 	github.com/teris-io/cli v1.0.1
-	gopkg.in/ini.v1 v1.67.0
+	gopkg.in/ini.v1 v1.67.1
 )
 
 require (
